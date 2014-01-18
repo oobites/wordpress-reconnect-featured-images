@@ -146,14 +146,12 @@ class Reconnect_Featured_Images_Admin {
 		 *
 		 * @TODO:
 		 *
-		 * - Change 'Page Title' to the title of your plugin admin page
-		 * - Change 'Menu Text' to the text for menu item for the plugin settings page
 		 * - Change 'manage_options' to the capability you see fit
 		 *   For reference: http://codex.wordpress.org/Roles_and_Capabilities
 		 */
-		$this->plugin_screen_hook_suffix = add_options_page(
-			__( 'Page Title', $this->plugin_slug ),
-			__( 'Menu Text', $this->plugin_slug ),
+		$this->plugin_screen_hook_suffix = add_menu_page(
+			__( 'Reconnect Featured Images', $this->plugin_slug ),
+			__( 'Featured Images', $this->plugin_slug ),
 			'manage_options',
 			$this->plugin_slug,
 			array( $this, 'display_plugin_admin_page' )
